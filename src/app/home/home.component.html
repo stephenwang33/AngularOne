@@ -1,0 +1,27 @@
+<h3>Welcome to Angular One!</h3>
+<h4>List of Products(Sample Data)</h4>
+<div style="text-align: right">
+ <label for="prods">Search field: </label>
+ &nbsp;
+<select #selectedOption id="options">
+  <option value="title">Title</option>
+  <option value="vendor">Vendor</option>
+  <option value="sku">Sku</option>
+  <option value="createdAt">Created_At</option>
+</select>&nbsp;&nbsp;&nbsp;
+<input #newInput type="text" newInput=""/>&nbsp;&nbsp;&nbsp;<button (click) = "searchProducts(newInput.value, selectedOption.value)">Search</button>
+</div> 
+<table id="customers">
+    <tr>
+        <th *ngFor="let field of fields">{{field}}</th>
+    </tr>
+    <tr *ngFor="let product of products">
+        <td>{{product.id}}</td>
+        <td>{{product.type}}</td>
+        <td>{{product.title}}</td>
+        <td>{{product.vendor}}</td>
+        <td>{{product.sku}}</td>
+        <td>{{product.createdAt}}</td>
+        <td>{{product.price}}</td>
+    </tr>
+</table>

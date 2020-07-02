@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.styl']
 })
+
+
 export class AppComponent {
-  title = 'FirstApp';
+  title = 'Angular One';
+  authorName = 'Stephen Wang';
 }

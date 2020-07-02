@@ -1,0 +1,20 @@
+<h4>List of Autos</h4>
+<div *ngIf="autos; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+  <ul *ngIf="autos">
+    <li *ngFor="let auto of autos">
+      <p class="maker">Car Maker: {{auto.maker}}</p>
+      <p>Doors: {{auto.doors}}</p>
+      <p>Cylinders: {{auto.cylinders}}</p>
+      <p>HP: {{auto.hp}}</p>
+      <p class="other">RPM: {{auto.rpm}}</p>
+      <p>Price: {{auto.price}}</p>
+    </li>
+  </ul>
+</ng-template>
+<ng-template #elseBlock>
+  <p>Please download the Express project from Stephen' Github <a href='https://www.github.com/'>https://www.github.com/</a>, after download, under the project fold, run shell command "node index.js". This page is going to load the auto data from the Express Microservice.</p>
+  <p>Please note, both Augular and Express project run on localhost model. Below is the image of this page</p>
+  <img src="../../assets/service_page2.JPG" width="800" height="480"/>
+</ng-template>
+
