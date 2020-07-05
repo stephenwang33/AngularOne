@@ -38,7 +38,6 @@ export class Product {
 
 	}
 
-/*	
 	getJsonProducts() {
 
 		const jsonProds = "[{\"id\":4355464134678,    \
@@ -115,6 +114,5 @@ export class Product {
 			\"grams\":1361}   \
 		]";
 
-	}
-*/	
+	}	
 }

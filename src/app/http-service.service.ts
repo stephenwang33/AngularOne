@@ -2,6 +2,8 @@ import { Injectable, SystemJsNgModuleLoader } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { Router } from "@angular/router";
 import { HttpHeaders } from '@angular/common/http';
+import { environment } from '../environments/environment';
+
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -23,8 +25,6 @@ export class HttpServiceService {
   constructor(private httpClient: HttpClient) { }
 
   getRestContent() {  
-    return this.httpClient.get('http://localhost:5000/api/autos');
-    //return this.httpClient.get('http://localhost:5000/api/autos', {responseType : 'text'});
-    //return this.httpClient.get('https://api.openbrewerydb.org/breweries');
+    return this.httpClient.get(environment.apiEndpoint + 'api/autos');
   }
 }

@@ -17,38 +17,8 @@ export class ServiceComponent implements OnInit {
   constructor(private httpService:HttpServiceService) { }
 
   ngOnInit(): void {
-/*
-    this.httpService.getRestContent().subscribe(
-      (response: any) => {
-        this.autos = response;
-          console.log(response)
-          //location.reload()
-      }, 
-      (error: any) => {
-          console.log(error)
-      });
- */
-    /*
-    console.l.og("*******************"); 
-    this.httpService.getRestContent().subscribe(
-     (response: any) => {
-        console.log(response)
-        location.reload()
-    }, 
-    (error: any) => {
-        console.log(error)
-    })
-*/
-
       this.httpService.getRestContent().subscribe(data => {
         this.autos = data;
-        console.log(this.autos);
       });
   }
-
-  restCall() {
-    this.sResult = "Hello Angular, Charles is playing! ... ";
-  } 
-
-
 }

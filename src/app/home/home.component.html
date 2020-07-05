@@ -1,6 +1,6 @@
-<h3>Welcome to Angular One!</h3>
-<h4>List of Products(Sample Data)</h4>
-<div style="text-align: right">
+<h4>Welcome to Angular One!</h4>
+<h5>List of Products(Sample Data)</h5>
+<div style="text-align: right; padding: 5px;">
  <label for="prods">Search field: </label>
  &nbsp;
 <select #selectedOption id="options">
@@ -10,13 +10,14 @@
   <option value="createdAt">Created_At</option>
 </select>&nbsp;&nbsp;&nbsp;
 <input #newInput type="text" newInput=""/>&nbsp;&nbsp;&nbsp;<button (click) = "searchProducts(newInput.value, selectedOption.value)">Search</button>
+<!--&nbsp;&nbsp;&nbsp;<button (click) = "newProductClick()">New</button>-->
 </div> 
 <table id="customers">
     <tr>
         <th *ngFor="let field of fields">{{field}}</th>
     </tr>
     <tr *ngFor="let product of products">
-        <td>{{product.id}}</td>
+        <td><a [routerLink] = "['/product', product.id]" >{{product.id}}</a></td>
         <td>{{product.type}}</td>
         <td>{{product.title}}</td>
         <td>{{product.vendor}}</td>

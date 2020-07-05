@@ -1,0 +1,66 @@
+<div>
+<h5>Product Details</h5>
+<div style="text-align: right; padding: 5px;">
+	<a href="#" routerLink="/" >Back to Home</a>
+</div>
+<div *ngIf="prod; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock>
+	<table width = "100%">
+		<tr>
+			<th width="15%">Field</th>
+			<th width="85%">Value</th>
+		</tr>
+		<tr>
+			<td class="fieldName" >ID:</td>
+			<td>{{prod.id}}</td>
+		</tr>
+		<tr>
+			<td class="fieldName">Title:</td>
+			<td>{{prod.title}}</td>
+		</tr>
+		<tr>
+			<td class="fieldName">Type:</td>
+ 			<td>{{prod.type}}</td>
+		</tr>
+		<tr>
+			<td class="fieldName">Vendor:</td>
+			<td>{{prod.vendor}}</td>
+		</tr>
+		<tr>
+			<td class="fieldName">Tag:</td>
+			<td>{{prod.tag}}</td>
+		</tr>
+		<tr>
+			<td class="fieldName">Sku:</td>
+			<td>{{prod.sku}}</td>
+		</tr>
+		<tr>
+			<td class="fieldName">Require Shipping:</td>
+			<td>{{prod.requireShipping}}</td>
+		</tr>
+		<tr>
+			<td class="fieldName">Taxable:</td>
+			<td>{{prod.taxable}}</td>
+		</tr>
+		<tr>
+			<td class="fieldName">Price:</td>
+			<td>${{prod.price}}</td>
+		</tr>
+		<tr>
+			<td class="fieldName">Grams:</td>
+			<td>{{prod.grams}}g</td>
+		</tr>
+		<tr>
+			<td class="fieldName">Created At:</td>
+			<td>{{prod.createdAt}}</td>
+		</tr>
+		<tr>
+			<td class="fieldName">Description:</td>
+			<td>{{prod.description}}</td>
+		</tr>
+	</table>
+</ng-template>
+<ng-template #elseBlock>
+	<p>Sorry! The product is not found by id: {{passingID}}</p>
+</ng-template>
+</div>
