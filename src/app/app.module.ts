@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { ServiceComponent } from './service/service.component';
 import { HomeComponent } from './home/home.component';
 import { ProdComponent } from './prod/prod.component';
+import { ReactxComponent } from './reactx/reactx.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ProdComponent } from './prod/prod.component';
     HomeComponent,
     AboutComponent,
     ServiceComponent,
-    ProdComponent
+    ProdComponent,
+    ReactxComponent
   ],
   imports: [
     BrowserModule,

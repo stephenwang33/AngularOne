@@ -1,0 +1,14 @@
+<div>
+	<h5>Movies Loaded by ReactiveJS</h5>
+	<div style="text-align: right; padding: 5px;">
+		<button (click) = "loadOne()" >Subscribe One</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<button (click) = "loadTwo()" >Subscribe Two</button>
+	</div>
+</div>
+<hr width = "800px"/>
+<div>
+	<div *ngFor = "let object of records">
+		<p>Subscriber {{subscriber}}: Movie id:{{object.id}}, name:<strong>{{object.name}}</strong>, published:{{object.publishedDate}}</p>
+	</div> 
+</div>
+
